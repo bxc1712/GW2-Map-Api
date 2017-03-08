@@ -3,7 +3,7 @@ const crypto = require('crypto');
 
 const places = {};
 
-const etag = crypto.createHash('sha1').update(JSON.stringify(users));
+const etag = crypto.createHash('sha1').update(JSON.stringify(places));
 const digest = etag.digest('hex');
 
 const respondJSON = (request, response, status, object) => {
